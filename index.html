@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panificadora da Dona Clara</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🥖 Panificadora da Dona Clara</h1>
+        <p>Tradição familiar & Conveniência Digital</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Faça sua Encomenda</h2>
+            <form id="orderForm">
+                <label for="cliente">Seu Nome:</label>
+                <input type="text" id="cliente" required placeholder="Digite seu nome">
+
+                <label for="produto">Selecione o Produto:</label>
+                <select id="produto">
+                    <option value="Pão de Fermentação Natural - R$ 18,00">Pão de Fermentação Natural (R$ 18,00)</option>
+                    <option value="Tábua de Frios - R$ 85,00">Tábua de Frios Colonial (R$ 85,00)</option>
+                    <option value="Bolo Artesanal do Prof. Sedenilso - R$ 32,00">Bolo Artesanal do Prof. Sedenilso (R$ 32,00)</option>
+                    <option value="Kit Coffee Empresarial - R$ 150,00">Kit Coffee Break (R$ 150,00)</option>
+                </select>
+
+                <label for="data">Data e Horário de Retirada:</label>
+                <input type="datetime-local" id="data" required>
+
+                <label for="obs">Observações / Personalização:</label>
+                <textarea id="obs" placeholder="Ex: Sem lactose, recheio de doce de leite..."></textarea>
+
+                <button type="submit">Confirmar Encomenda</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Resumo da Encomenda</h2>
+            <div id="resultado" class="resultado-box">Nenhum pedido realizado ainda.</div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
